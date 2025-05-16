@@ -1,0 +1,56 @@
+{% extends 'commonheader.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% block content %}
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="static/assets/img/Pic1.png" alt="">
+          <div class="carousel-container">
+            <h2>Welcome to Block Chain Certification<br></h2>
+            <p style="color:black;">The "Blockchain Based Certificate Validation" system revolutionizes the validation of academic certificates by utilizing blockchain technology. It introduces a decentralized, tamper-proof ledger for recording and verifying certificates, mitigating the risks of certificate fraud.</p>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="static/assets/img/Pic2.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Welcome to Block Chain Certification<br></h2>
+            <p>The Certified Blockchain Developer certification covers blockchain concepts and practical applications, including Ethereum, IPFS, Hyperledger, and R3 Corda. Getting certified validates your expertise in blockchain development, distributed ledger systems, smart contract programming, and more.</p>
+
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="static/assets/img/Pic3.png" alt="">
+          <div class="carousel-container">
+            <h2>Welcome to Block Chain Certification<br></h2>
+            <p>Blockchain-based certificate generation and validation leverages the decentralized and secure nature of blockchain technology to create tamper-proof and easily verifiable digital certificates, addressing the challenges of traditional certificate management. </p>
+
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+{% endblock %}
+</body>
+</html>

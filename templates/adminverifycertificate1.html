@@ -1,0 +1,140 @@
+{% extends 'adminheader.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% block content %}
+     <style type="text/css">
+		table, tr, td, th{
+		border:1px solid black;
+		border-collapse:collapse;
+		text-align:center;
+		font-size:18px;
+		}
+		table{
+		width:100%;
+		}
+		th,td{
+		height:50px;
+		}
+	</style>
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Admin Verify Certificate</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/adminmainpage">Home</a></li>
+            <li class="current">Admin Verify Certificate</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <center>
+      <h2>Validation Form</h2></center>      
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+              {{msg}}
+            <form method="post" action="/adminverifycertificate2" enctype="multipart/form-data"> 
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="sid" class="form-control" placeholder="Student Id" required=""
+                  style="border:1px solid black;" value="{{data.StudentId}}" readonly>
+                </div>
+
+                <div class="col-md-6">
+                  <input type="text" name="name" id="name" class="form-control" placeholder="First Name" required=""
+                  style="border:1px solid black;" value="{{data.StudentName}}" readonly>
+                </div>
+
+                <!-- <div class="col-md-6">
+                  <input type="text" name="lname" class="form-control" placeholder="Last Name" required=""
+                  style="border:1px solid black;" value="{{data.LastName}}" readonly>
+                </div> -->
+
+                <!-- <div class="col-md-6 ">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required=""
+                  style="border:1px solid black;" value="{{data.EmailId}}" readonly>
+                </div>
+
+                                <div class="col-md-6 ">
+                  <input type="text" class="form-control" name="phnumber" id="phnumber" placeholder="Phone Num" required=""
+                  style="border:1px solid black;" pattern="[6789][0-9]{9}"
+                  title="Phone Num should be 10 digits & starts from 6,7,8,9"
+                  value="{{data.PhoneNumber}}" readonly>
+                </div> -->
+
+                <div class="col-md-6">
+                  <input type="text" name="courseName" id="courseName" class="form-control" placeholder="Course Name" required=""
+                  style="border:1px solid black;"
+                  value="{{data.CourseName}}">
+                </div>
+
+                                <div class="col-md-6">
+                  <input type="text" name="courseId" id="courseId" class="form-control" placeholder="Course Id" required=""
+                  style="border:1px solid black;"
+                  value="{{data.CourseId}}">
+                </div>
+
+
+                <div class="col-md-6">
+                  <input type="text" name="instituteName" id="instituteName" class="form-control" placeholder="Enter Name, City" required=""
+                  style="border:1px solid black;"
+                  value="{{data.InstituteName}}">
+                </div>
+
+                <div class="col-md-6">
+                  <input type="date" name="startDate" id="startDate" class="form-control" placeholder="Enter Course Start Date" required=""
+                  style="border:1px solid black;"
+                  value="{{data.StartDate}}">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="file" class="custom-file-upload">
+                    End Date
+                  </label>
+                  <input type="date" name="endDate" id="endDate" class="form-control" placeholder="Enter the end date here" required=""
+                  style="border:1px solid black;" value="{{data.EndDate}}">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="file" class="custom-file-upload">
+                    Upload Certificate
+                  </label>
+                  <input type="file" id="file" name="file" accept=".png" required />
+                </div>
+
+                <div class="col-md-12 text-center">                  
+                  <!-- <button type="submit" class="btn-submit">Upload & Validate</button> -->
+                  <button type="submit" style="border:1px solid black; width:150px; height:50px;">Upload & Validate</button>
+                  <!-- <button onclick="generateCertificate()">Generate Now</button> -->
+                  <!-- <button type="submit" style="border:1px solid black; width:150px; height:50px;">Generate Certificate</button> -->
+                </div>
+
+
+                <!-- <a id="downloadLink" style="display: none" download="Certificate.png">
+                  <button id="downloadButton">Download Certificate</button>
+                </a>
+          
+              <canvas id="certificateCanvas" style="display: none;"></canvas>
+              <script src="static/validate.js"></script> -->
+              <!-- <script src="static/script.js"></script> -->
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- /Contact Section -->
+
+{% endblock %}
+</body>
+</html>
